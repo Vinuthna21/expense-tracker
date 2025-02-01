@@ -1,0 +1,24 @@
+<div class="card p-3">
+  <h4>Add Expense</h4>
+  <form (submit)="addExpense()">
+    <div class="mb-3">
+      <label>Amount:</label>
+      <input [(ngModel)]="amount" type="number" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Category:</label>
+      <select [(ngModel)]="category" class="form-control" required>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Entertainment</option>
+        <option>Others</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label>Date:</label>
+      <input [(ngModel)]="date" type="date" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Expense</button>
+  </form>
+</div>
+<p>expense-form works!</p>
